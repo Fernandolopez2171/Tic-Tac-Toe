@@ -1,0 +1,34 @@
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h1 class="mb-3">✖ {{ title }} ⭕</h1>
+    <div class="d-flex justify-content-center align-items-center gap-4 p-3">
+      <app-status [currentPlayer]="currentPlayer" />
+      <button type="button" class="btn btn-secondary" (click)="resetGame()">
+        <i class="bi bi-arrow-counterclockwise"></i> Reiniciar
+      </button>
+    </div>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <app-board
+      #board
+      [currentPlayer]="currentPlayer"
+      (turnChanged)="handleTurnChange()"
+    ></app-board>
+  </div>
+
+  <div class="mt-4 d-flex justify-content-center gap-3">
+    <button class="btn btn-outline-primary px-4 py-2 fs-5">
+      ✖ Victorias: {{ xWins }}
+    </button>
+    <button class="btn btn-outline-secondary px-4 py-2 fs-5">
+      🤝 Empates: {{ draws }}
+    </button>
+    <button class="btn btn-outline-warning px-4 py-2 fs-5">
+      ⭕ Victorias: {{ oWins }}
+    </button>
+  </div>
+
+  <!-- Modal Component -->
+  <app-modal-winner *ngIf="winner" [winner]="winner"/>
+</div>

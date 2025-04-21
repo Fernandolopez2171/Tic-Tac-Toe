@@ -1,0 +1,18 @@
+<!-- modal-winner.component.html -->
+<div class="modal-overlay" *ngIf="winner" (click)="closeModal()"></div>
+<div class="modal fade show" *ngIf="winner" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true" style="display: block;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel">¡Ganador!</h5>
+        <button type="button" class="btn-close" (click)="closeModal()"></button>
+      </div>
+      <div class="modal-body">
+        <p>{{ winner }} ha ganado el juego 🎉</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

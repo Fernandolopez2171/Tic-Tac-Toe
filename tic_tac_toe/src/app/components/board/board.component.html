@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="row g-3">
+    <div class="col-4" *ngFor="let id of cellsArray">
+      <app-cell
+        [cellId]="id"
+        [currentPlayer]="currentPlayer"
+        (cellClicked)="handleCellClick($event)"
+        [disabled]="isGameOver"
+      />
+    </div>
+  </div>
+</div>
