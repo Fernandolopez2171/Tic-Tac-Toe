@@ -11,10 +11,25 @@ Este proyecto es un juego de Tic-Tac-Toe (Tres en Raya) desarrollado con Angular
 
 ## Cómo jugar
 
-1. Inicia el servidor de desarrollo con el comando `ng serve -o`.
-2. Abre tu navegador y navega a `http://localhost:4200/`.
-3. Haz clic en las celdas del tablero para alternar entre los turnos de los jugadores.
-4. El juego detectará automáticamente un ganador o un empate y actualizará los contadores.
+1. Clona este repositorio en tu máquina local:
+   ```bash
+   git clone https://github.com/Fernandolopez2171/Tic-Tac-Toe.git
+   ```
+2. Navega al directorio del proyecto:
+   ```bash
+   cd tic_tac_toe
+   ```
+3. Instala las dependencias necesarias:
+   ```bash
+   npm install
+   ```
+4. Inicia el servidor de desarrollo con el comando:
+   ```bash
+   ng serve -o
+   ```
+5. Abre tu navegador y navega a `http://localhost:4200/`.
+6. Haz clic en las celdas del tablero para alternar entre los turnos de los jugadores.
+7. El juego detectará automáticamente un ganador o un empate y actualizará los contadores.
 
 ## Captura de pantalla
 
